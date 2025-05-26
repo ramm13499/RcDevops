@@ -8,5 +8,4 @@ def home():
 
 if __name__ == '__main__':
     print("Flask app ran successfully.")
-    Comment this out if not needed:
      app.run()
