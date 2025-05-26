@@ -14,13 +14,24 @@ pipeline {
             }
         }
 
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+                sh '''
+                    #!/bin/bash
+                    . venv/bin/activate
+                    pytest tests/
+                '''
+            }
+        }
+
         stage('Run') {
             steps {
                 echo 'Running Python script...'
                 sh '''
                     #!/bin/bash
                     . venv/bin/activate
-                      python python_app.py
+                    python python_app.py
                 '''
             }
         }
