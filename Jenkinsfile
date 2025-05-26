@@ -20,7 +20,7 @@ pipeline {
                 sh '''
                     #!/bin/bash
                     . venv/bin/activate
-                     python app.py
+                      app.py
                 '''
             }
         }
